@@ -1,0 +1,98 @@
+@use 'base';
+
+nav {
+  padding: 2rem;
+  z-index: 10;
+  .-brand {
+    font-size: 2rem;
+    color: $color-highlight;
+    &:hover {
+      color: $color-main;
+    }
+  }
+  .-div-nav {
+    display: none;
+    &.-active {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $color-main;
+      width: 80%;
+      height: 100%;
+      z-index: 100;
+      transform: translateX(-100%);
+      animation: slide 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      ul {
+        width: 100%;
+        li {
+          display: block;
+          text-align: center;
+          font-size: 3rem;
+          padding: 2rem 0;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      a {
+        padding: 0.5rem 3rem;
+        color: $off-white;
+        &:hover {
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+  .-menu {
+    display: inline;
+    font-size: 2rem;
+    cursor: pointer;
+    float: right;
+    z-index: 200;
+    color: $off-white;
+  }
+}
+
+%-button {
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  margin: 0 2rem;
+  display: inline-block;
+  box-shadow: 0px 15px 20px #ff86521f, 0px 3px 5px #ff86523d;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    transform: translateY(-0.1rem) scale(1.06);
+    box-shadow: 0px 30px 20px #ff86521f, 0px 3px 5px #ff86523d;
+  }
+}
+
+.-button-primary {
+  @extend %-button;
+  background-color: $color-accent;
+  color: $off-white;
+  &:hover {
+    color: $off-white;
+  }
+}
+
+.-button-secondary {
+  @extend %-button;
+  border: 3px solid $color-accent;
+  color: $off-white;
+  &:hover {
+    color: $off-white;
+  }
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(0);
+  }
+}

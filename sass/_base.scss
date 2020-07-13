@@ -1,0 +1,35 @@
+$color-main: #6da06f;
+$color-highlight: #b6e9d1;
+$color-accent: #ff8652;
+$off-white: #e6efed;
+%font-family-regular {
+  font-family: "Raleway", sans-serif;
+}
+
+%font-family-display {
+  font-family: "Abril Fatface", cursive;
+}
+
+* {
+  @extend %font-family-regular;
+}
+
+html {
+  font-size: 0.8rem;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.-font-display {
+  @extend %font-family-display;
+}
