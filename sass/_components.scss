@@ -100,6 +100,19 @@ nav {
   }
 }
 
+.-watermark {
+  color: $color-accent;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  font-size: 17vw;
+  letter-spacing: -0.3rem;
+  line-height: 100%;
+  opacity: 0.15;
+  user-select: none;
+}
+
 @keyframes slide {
   100% {
     transform: translateX(0);

@@ -2,7 +2,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.-font-display {
+.-font-display, #about .-div-about h1 span {
   font-family: "Abril Fatface", cursive;
 }
 
@@ -82,6 +82,37 @@ a:hover {
 
 #landing .-div-landing .-div-central div {
   margin-top: 4rem;
+}
+
+#about {
+  position: relative;
+}
+
+#about .-div-about h1 {
+  text-align: center;
+  font-size: 4rem;
+  position: relative;
+}
+
+#about .-div-about h1 span {
+  color: #6da06f;
+  padding: 0 0.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #00000000), color-stop(0%, #b6e9d1), color-stop(90%, #b6e9d1), color-stop(0%, #00000000));
+  background: linear-gradient(180deg, #00000000 65%, #b6e9d1 0%, #b6e9d1 90%, #00000000 0%);
+}
+
+#about .-div-about p {
+  text-align: center;
+  width: 80%;
+  color: #004d3e;
+  margin: 3rem auto 0 auto;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 992px) {
+  #about .-div-about p {
+    width: 60%;
+  }
 }
 
 @use 'base';
@@ -209,6 +240,22 @@ nav .-menu:hover {
 
 .-button-secondary:hover {
   color: #e6efed;
+}
+
+.-watermark {
+  color: #ff8652;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  font-size: 17vw;
+  letter-spacing: -0.3rem;
+  line-height: 100%;
+  opacity: 0.15;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @-webkit-keyframes slide {

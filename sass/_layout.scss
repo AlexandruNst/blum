@@ -16,6 +16,8 @@
       background-image: url(../res/img/bg1.jpg);
       background-size: cover;
       background-position: center center;
+      // background: url("../res/img/bg1.jpg") no-repeat center center fixed;
+      // background-size: cover;
       filter: brightness(0.5);
       z-index: -1;
     }
@@ -39,6 +41,39 @@
       }
       div {
         margin-top: 4rem;
+      }
+    }
+  }
+}
+
+#about {
+  position: relative;
+  .-div-about {
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      position: relative;
+      span {
+        color: $color-main;
+        @extend %font-family-display;
+        padding: 0 0.5rem;
+        background: linear-gradient(
+          180deg,
+          #00000000 65%,
+          $color-highlight 0%,
+          $color-highlight 90%,
+          #00000000 0%
+        );
+      }
+    }
+    p {
+      text-align: center;
+      width: 80%;
+      color: $off-black;
+      margin: 3rem auto 0 auto;
+      font-size: 1.4rem;
+      @media (min-width: 992px) {
+        width: 60%;
       }
     }
   }
