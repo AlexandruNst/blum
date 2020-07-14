@@ -2,10 +2,11 @@
 
 #landing {
   height: 100vh;
+  min-height: 600px;
+  position: relative;
 
   .-div-landing {
     .-bg {
-      //background
       content: "";
       position: absolute;
       top: 0;
@@ -33,7 +34,7 @@
         color: $color-highlight;
       }
       h1 {
-        font-size: 7rem;
+        font-size: 11vw;
         color: $off-white;
       }
       div {
