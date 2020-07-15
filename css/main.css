@@ -96,6 +96,7 @@ a:hover {
   min-height: 570px;
   width: 100vw;
   margin-right: 0;
+  margin-left: 0;
   margin-bottom: 15vw;
 }
 
@@ -107,6 +108,8 @@ a:hover {
 
 #about .-div-about .row .col-12 {
   padding-right: 0;
+  padding-left: 0;
+  margin: 5rem auto;
 }
 
 #about .-div-about h1 {
@@ -172,7 +175,7 @@ a:hover {
 #about .-div-about .-div-side .-img-container {
   position: absolute;
   height: 100%;
-  width: 60vw;
+  width: 70vw;
 }
 
 @media (min-width: 992px) {
