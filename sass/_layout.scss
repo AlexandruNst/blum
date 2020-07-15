@@ -53,8 +53,13 @@
     .row {
       min-height: 570px;
       width: 100vw;
+      margin-right: 0;
       @media (min-width: 992px) {
         min-height: 0px;
+      }
+      margin-bottom: 15vw;
+      .col-12 {
+        padding-right: 0;
       }
     }
     h1 {
@@ -87,11 +92,23 @@
     .-div-side {
       position: relative;
       background-color: $color-highlight;
-      border-top-right-radius: 200px;
-      border-bottom-right-radius: 200px;
+
+      &.-left {
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+      }
+
+      &.-right {
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+        margin-left: 10%;
+      }
       width: 90%;
       @media (min-width: 992px) {
         width: 100%;
+        &.-right {
+          margin-left: 0;
+        }
       }
       height: 15rem;
       @media (min-width: 992px) {
@@ -104,28 +121,38 @@
         @media (min-width: 992px) {
           width: 35vw;
         }
-        right: 5%;
+        &.-right {
+          right: 5%;
+        }
+        &.-left {
+          left: 5%;
+        }
       }
       img {
-        width: 70%;
+        // width: 70%;
+        height: 75%;
         // Small devices (landscape phones, 576px and up)
         @media (min-width: 576px) {
-          width: 60%;
+          height: 80%;
+          // width: 60%;
         }
 
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {
-          width: 60%;
+          // width: 60%;
+          height: 90%;
         }
 
         // Large devices (desktops, 992px and up)
         @media (min-width: 992px) {
-          width: 70%;
+          // width: 70%;
+          height: 80%;
         }
 
         // Extra large devices (large desktops, 1200px and up)
         @media (min-width: 1200px) {
-          width: 60%;
+          // width: 60%;
+          height: 100%;
         }
 
         position: absolute;

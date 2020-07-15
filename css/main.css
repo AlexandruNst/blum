@@ -95,12 +95,18 @@ a:hover {
 #about .-div-about .row {
   min-height: 570px;
   width: 100vw;
+  margin-right: 0;
+  margin-bottom: 15vw;
 }
 
 @media (min-width: 992px) {
   #about .-div-about .row {
     min-height: 0px;
   }
+}
+
+#about .-div-about .row .col-12 {
+  padding-right: 0;
 }
 
 #about .-div-about h1 {
@@ -133,15 +139,27 @@ a:hover {
 #about .-div-about .-div-side {
   position: relative;
   background-color: #b6e9d1;
-  border-top-right-radius: 200px;
-  border-bottom-right-radius: 200px;
   width: 90%;
   height: 15rem;
+}
+
+#about .-div-about .-div-side.-left {
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+#about .-div-about .-div-side.-right {
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  margin-left: 10%;
 }
 
 @media (min-width: 992px) {
   #about .-div-about .-div-side {
     width: 100%;
+  }
+  #about .-div-about .-div-side.-right {
+    margin-left: 0;
   }
 }
 
@@ -155,7 +173,6 @@ a:hover {
   position: absolute;
   height: 100%;
   width: 60vw;
-  right: 5%;
 }
 
 @media (min-width: 992px) {
@@ -164,8 +181,16 @@ a:hover {
   }
 }
 
+#about .-div-about .-div-side .-img-container.-right {
+  right: 5%;
+}
+
+#about .-div-about .-div-side .-img-container.-left {
+  left: 5%;
+}
+
 #about .-div-about .-div-side img {
-  width: 70%;
+  height: 75%;
   position: absolute;
   -webkit-box-shadow: 0px 15px 20px #0d774b4b, 0px 3px 10px #11965f4b;
           box-shadow: 0px 15px 20px #0d774b4b, 0px 3px 10px #11965f4b;
@@ -173,25 +198,25 @@ a:hover {
 
 @media (min-width: 576px) {
   #about .-div-about .-div-side img {
-    width: 60%;
+    height: 80%;
   }
 }
 
 @media (min-width: 768px) {
   #about .-div-about .-div-side img {
-    width: 60%;
+    height: 90%;
   }
 }
 
 @media (min-width: 992px) {
   #about .-div-about .-div-side img {
-    width: 70%;
+    height: 80%;
   }
 }
 
 @media (min-width: 1200px) {
   #about .-div-about .-div-side img {
-    width: 60%;
+    height: 100%;
   }
 }
 
