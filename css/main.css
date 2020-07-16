@@ -2,7 +2,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.-font-display, #about .-div-about h1 span {
+.-font-display, #about .-div-about h1 span, #showcase .-div-showcase h1 span {
   font-family: "Abril Fatface", cursive;
 }
 
@@ -27,6 +27,7 @@ a:hover {
 }
 
 @use 'base';
+@use 'components';
 #landing {
   height: 100vh;
   min-height: 600px;
@@ -117,35 +118,6 @@ a:hover {
 #about .-div-about .row .col {
   padding-right: 0;
   padding-left: 0;
-}
-
-#about .-div-about h1 {
-  text-align: center;
-  font-size: 4rem;
-  position: relative;
-  width: 80%;
-  margin: auto;
-}
-
-#about .-div-about h1 span {
-  color: #6da06f;
-  padding: 0 0.5rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #00000000), color-stop(0%, #b6e9d1), color-stop(90%, #b6e9d1), color-stop(0%, #00000000));
-  background: linear-gradient(180deg, #00000000 65%, #b6e9d1 0%, #b6e9d1 90%, #00000000 0%);
-}
-
-#about .-div-about p {
-  text-align: center;
-  width: 80%;
-  color: #004d3e;
-  margin: 3rem auto 0 auto;
-  font-size: 1.4rem;
-}
-
-@media (min-width: 992px) {
-  #about .-div-about p {
-    width: 60%;
-  }
 }
 
 #about .-div-about .-div-side {
@@ -362,6 +334,85 @@ a:hover {
 
 #showcase {
   background-color: #efefef;
+  position: relative;
+}
+
+#showcase .-div-showcase {
+  padding-top: 14vw;
+}
+
+@media (min-width: 992px) {
+  #showcase .-div-showcase h1 {
+    font-size: 6rem !important;
+  }
+}
+
+#showcase .-div-showcase .-filters {
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 992px) {
+  #showcase .-div-showcase .-filters {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#showcase .-div-showcase .-filters a {
+  margin: 0;
+}
+
+#showcase .-div-showcase .-filters a.-button-secondary {
+  color: #004d3e;
+}
+
+#showcase .-div-showcase .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+#showcase .-div-showcase .row .col {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  #showcase .-div-showcase .row .col {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    max-width: 25%;
+  }
+}
+
+#showcase .-div-showcase .row .col img {
+  vertical-align: middle;
+  width: 100%;
+  margin: 1rem;
+  -webkit-box-shadow: 0 10px 20px rgba(5, 39, 22, 0.19), 0 6px 6px rgba(5, 39, 22, 0.23);
+          box-shadow: 0 10px 20px rgba(5, 39, 22, 0.19), 0 6px 6px rgba(5, 39, 22, 0.23);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#showcase .-div-showcase .row .col img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @use 'base';
@@ -473,9 +524,39 @@ nav .-menu:hover {
           box-shadow: 0px 30px 20px #ff86521f, 0px 3px 5px #ff86523d;
 }
 
+#about .-div-about h1, #showcase .-div-showcase h1 {
+  text-align: center;
+  font-size: 4rem;
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+#about .-div-about h1 span, #showcase .-div-showcase h1 span {
+  color: #6da06f;
+  padding: 0 0.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #00000000), color-stop(0%, #b6e9d1), color-stop(90%, #b6e9d1), color-stop(0%, #00000000));
+  background: linear-gradient(180deg, #00000000 65%, #b6e9d1 0%, #b6e9d1 90%, #00000000 0%);
+}
+
+#about .-div-about p, #showcase .-div-showcase p {
+  text-align: center;
+  width: 80%;
+  color: #004d3e;
+  margin: 3rem auto 0 auto;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 992px) {
+  #about .-div-about p, #showcase .-div-showcase p {
+    width: 60%;
+  }
+}
+
 .-button-primary {
   background-color: #ff8652;
   color: #e6efed;
+  border: 3px solid #ff8652;
 }
 
 .-button-primary:hover {

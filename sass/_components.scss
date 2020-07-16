@@ -82,10 +82,43 @@ nav {
   }
 }
 
+%title-text {
+  text-align: center;
+  font-size: 4rem;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  span {
+    color: $color-main;
+    @extend %font-family-display;
+    padding: 0 0.5rem;
+    background: linear-gradient(
+      180deg,
+      #00000000 65%,
+      $color-highlight 0%,
+      $color-highlight 90%,
+      #00000000 0%
+    );
+  }
+}
+
+%normal-text {
+  text-align: center;
+  width: 80%;
+  color: $off-black;
+  margin: 3rem auto 0 auto;
+  font-size: 1.4rem;
+  @media (min-width: 992px) {
+    width: 60%;
+  }
+}
+
 .-button-primary {
   @extend %-button;
   background-color: $color-accent;
   color: $off-white;
+  border: 3px solid $color-accent;
+
   &:hover {
     color: $off-white;
   }
