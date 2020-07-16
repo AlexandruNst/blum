@@ -212,3 +212,98 @@
     }
   }
 }
+
+#stats {
+  margin-top: 13rem;
+  background: linear-gradient(177deg, #00000000 50%, $color-grey-bg 50%);
+  .-div-stats {
+    width: 70%;
+    margin: auto;
+    color: $off-white;
+    text-align: center;
+    .container {
+      background-color: $color-main;
+      border-radius: 10px;
+      .row {
+        i {
+          font-size: 300%;
+          margin: 1rem 0;
+        }
+        p {
+          margin: 0;
+          font-size: 1.4rem;
+        }
+        div {
+          padding: 2rem 0;
+        }
+        div:nth-child(1)::after,
+        div:nth-child(3)::after {
+          content: "";
+          width: 1px;
+          height: 60%;
+          background-color: red;
+          border-radius: 100%;
+          background: -webkit-gradient(
+            linear,
+            0 0,
+            0 100%,
+            from($color-main),
+            to($color-main),
+            color-stop(50%, $color-highlight)
+          );
+          position: absolute;
+          right: 0;
+          top: 20%;
+        }
+
+        div:nth-child(2)::after {
+          @media (min-width: 992px) {
+            content: "";
+            width: 1px;
+            height: 60%;
+            background-color: red;
+            border-radius: 100%;
+            background: -webkit-gradient(
+              linear,
+              0 0,
+              0 100%,
+              from($color-main),
+              to($color-main),
+              color-stop(50%, $color-highlight)
+            );
+            position: absolute;
+            right: 0;
+            top: 20%;
+          }
+        }
+
+        div:nth-child(1)::before,
+        div:nth-child(2)::before {
+          @media (min-width: 992px) {
+            display: none;
+          }
+          content: "";
+          width: 80%;
+          height: 1px;
+          background-color: red;
+          border-radius: 100%;
+          background: -webkit-gradient(
+            linear,
+            0 0,
+            100% 0,
+            from($color-main),
+            to($color-main),
+            color-stop(50%, $color-highlight)
+          );
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+        }
+      }
+    }
+  }
+}
+
+#showcase {
+  background-color: $color-grey-bg;
+}
