@@ -127,9 +127,9 @@ nav {
 .-button-secondary {
   @extend %-button;
   border: 3px solid $color-accent;
-  color: $off-white;
+  color: $off-black;
   &:hover {
-    color: $off-white;
+    color: $off-black;
   }
 }
 
@@ -142,7 +142,7 @@ nav {
   font-size: 17vw;
   letter-spacing: -0.3rem;
   line-height: 100%;
-  opacity: 0.15;
+  opacity: 0.12;
   user-select: none;
 }
 

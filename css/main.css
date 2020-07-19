@@ -2,7 +2,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.-font-display, #about .-div-about h1 span, #showcase .-div-showcase h1 span {
+.-font-display, #about .-div-about h1 span, #showcase .-div-showcase h1 span, #contact .-div-contact .-div-form h1 span {
   font-family: "Abril Fatface", cursive;
 }
 
@@ -83,6 +83,14 @@ a:hover {
 
 #landing .-div-landing .-div-central div {
   margin-top: 4rem;
+}
+
+#landing .-div-landing .-button-secondary {
+  color: #e6efed;
+}
+
+#landing .-div-landing .-button-secondary:hover {
+  color: #e6efed;
 }
 
 #about {
@@ -254,6 +262,26 @@ a:hover {
   }
 }
 
+#about .-div-about .-about-buttons {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 992px) {
+  #about .-div-about .-about-buttons {
+    width: 40%;
+  }
+}
+
+#about .-div-about .-about-buttons a {
+  margin: 0;
+}
+
 #stats {
   margin-top: 13rem;
   background: linear-gradient(177deg, #00000000 50%, #efefef 50%);
@@ -333,12 +361,23 @@ a:hover {
 }
 
 #showcase {
-  background-color: #efefef;
+  background: linear-gradient(177deg, #efefef 95%, #00000000 95%);
   position: relative;
+  padding-bottom: 5rem;
+}
+
+#showcase .-watermark {
+  top: 6rem;
 }
 
 #showcase .-div-showcase {
-  padding-top: 14vw;
+  padding-top: 12rem;
+}
+
+@media (min-width: 992px) {
+  #showcase .-div-showcase {
+    padding-top: 20rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -368,10 +407,6 @@ a:hover {
 
 #showcase .-div-showcase .-filters a {
   margin: 0;
-}
-
-#showcase .-div-showcase .-filters a.-button-secondary {
-  color: #004d3e;
 }
 
 #showcase .-div-showcase .row {
@@ -413,6 +448,55 @@ a:hover {
 #showcase .-div-showcase .row .col img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+#contact {
+  position: relative;
+}
+
+#contact .col-12 {
+  margin-bottom: 5rem;
+}
+
+#contact .-div-contact {
+  padding-top: 6rem;
+}
+
+@media (min-width: 992px) {
+  #contact .-div-contact {
+    padding-top: 16rem;
+  }
+}
+
+#contact .-div-contact p {
+  margin-top: 1rem !important;
+}
+
+#contact .-div-contact .-div-form label {
+  display: block;
+  text-align: left !important;
+  margin: 2rem 0 1rem 0 !important;
+}
+
+#contact .-div-contact .-div-form input,
+#contact .-div-contact .-div-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #004d3e;
+  border: 2px solid #6da06f;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#contact .-div-contact .-div-form input:focus,
+#contact .-div-contact .-div-form textarea:focus {
+  border: 2px solid #b6e9d1;
+  outline: none;
+}
+
+#contact .-div-contact .-div-form input {
+  height: 3rem;
 }
 
 @use 'base';
@@ -524,7 +608,7 @@ nav .-menu:hover {
           box-shadow: 0px 30px 20px #ff86521f, 0px 3px 5px #ff86523d;
 }
 
-#about .-div-about h1, #showcase .-div-showcase h1 {
+#about .-div-about h1, #showcase .-div-showcase h1, #contact .-div-contact .-div-form h1 {
   text-align: center;
   font-size: 4rem;
   position: relative;
@@ -532,14 +616,14 @@ nav .-menu:hover {
   margin: auto;
 }
 
-#about .-div-about h1 span, #showcase .-div-showcase h1 span {
+#about .-div-about h1 span, #showcase .-div-showcase h1 span, #contact .-div-contact .-div-form h1 span {
   color: #6da06f;
   padding: 0 0.5rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, #00000000), color-stop(0%, #b6e9d1), color-stop(90%, #b6e9d1), color-stop(0%, #00000000));
   background: linear-gradient(180deg, #00000000 65%, #b6e9d1 0%, #b6e9d1 90%, #00000000 0%);
 }
 
-#about .-div-about p, #showcase .-div-showcase p {
+#about .-div-about p, #showcase .-div-showcase p, #contact .-div-contact p, #contact .-div-contact .-div-form label {
   text-align: center;
   width: 80%;
   color: #004d3e;
@@ -548,7 +632,7 @@ nav .-menu:hover {
 }
 
 @media (min-width: 992px) {
-  #about .-div-about p, #showcase .-div-showcase p {
+  #about .-div-about p, #showcase .-div-showcase p, #contact .-div-contact p, #contact .-div-contact .-div-form label {
     width: 60%;
   }
 }
@@ -565,11 +649,11 @@ nav .-menu:hover {
 
 .-button-secondary {
   border: 3px solid #ff8652;
-  color: #e6efed;
+  color: #004d3e;
 }
 
 .-button-secondary:hover {
-  color: #e6efed;
+  color: #004d3e;
 }
 
 .-watermark {
@@ -581,7 +665,7 @@ nav .-menu:hover {
   font-size: 17vw;
   letter-spacing: -0.3rem;
   line-height: 100%;
-  opacity: 0.15;
+  opacity: 0.12;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
