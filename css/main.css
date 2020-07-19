@@ -2,7 +2,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.-font-display, #about .-div-about h1 span, #showcase .-div-showcase h1 span, #contact .-div-contact .-div-form h1 span {
+.-font-display, footer .container div p#-f-logo, #about .-div-about h1 span, #showcase .-div-showcase h1 span, #contact .-div-contact .-div-form h1 span {
   font-family: "Abril Fatface", cursive;
 }
 
@@ -497,6 +497,104 @@ a:hover {
 
 #contact .-div-contact .-div-form input {
   height: 3rem;
+}
+
+footer {
+  background-color: #b6e9d1;
+  padding: 4rem 0;
+}
+
+footer .container div a {
+  color: #004d3e;
+}
+
+footer .container div a:hover {
+  color: #6da06f;
+}
+
+footer .container div p {
+  color: #004d3e;
+  font-weight: bold;
+}
+
+footer .container div p#-f-logo {
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+footer .container div.-socials {
+  display: inline-block;
+}
+
+footer .container div.-socials a {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+footer .container div.-socials a:nth-child(2) {
+  margin: 0 2rem;
+}
+
+@media (max-width: 992px) {
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .container div {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  footer .container div a {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .container div {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container div a {
+    margin: 0.5rem 0;
+  }
+}
+
+footer .-personal {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  footer .-personal {
+    margin-top: 5rem;
+  }
+}
+
+footer .-personal a {
+  color: #004d3e;
+}
+
+footer .-personal a:hover {
+  color: #6da06f;
 }
 
 @use 'base';
