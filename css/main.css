@@ -26,6 +26,11 @@ a:hover {
   text-decoration: none;
 }
 
+.-dim {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
 @use 'base';
 @use 'components';
 #landing {
@@ -77,8 +82,14 @@ a:hover {
 }
 
 #landing .-div-landing .-div-central h1 {
-  font-size: 11vw;
+  font-size: 14vw;
   color: #e6efed;
+}
+
+@media (min-width: 768px) {
+  #landing .-div-landing .-div-central h1 {
+    font-size: 11vw;
+  }
 }
 
 #landing .-div-landing .-div-central div {
@@ -272,9 +283,21 @@ a:hover {
       justify-content: space-around;
 }
 
+@media (min-width: 768px) {
+  #about .-div-about .-about-buttons {
+    height: 50%;
+  }
+}
+
 @media (min-width: 992px) {
   #about .-div-about .-about-buttons {
-    width: 40%;
+    width: 35%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #about .-div-about .-about-buttons {
+    width: 25%;
   }
 }
 
@@ -456,6 +479,7 @@ a:hover {
 
 #contact .col-12 {
   margin-bottom: 5rem;
+  padding: 2rem;
 }
 
 #contact .-div-contact {
@@ -464,7 +488,7 @@ a:hover {
 
 @media (min-width: 992px) {
   #contact .-div-contact {
-    padding-top: 16rem;
+    padding-top: 14rem;
   }
 }
 
@@ -497,6 +521,15 @@ a:hover {
 
 #contact .-div-contact .-div-form input {
   height: 3rem;
+}
+
+#contact .-div-contact .-div-form button {
+  margin: 2rem auto;
+  display: block;
+}
+
+#contact .-div-contact .-div-info {
+  margin-top: 3rem;
 }
 
 footer {
@@ -581,6 +614,7 @@ footer .container div.-socials a:nth-child(2) {
 
 footer .-personal {
   text-align: center;
+  color: #004d3e;
 }
 
 @media (min-width: 992px) {
@@ -591,10 +625,29 @@ footer .-personal {
 
 footer .-personal a {
   color: #004d3e;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer .-personal a::after {
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 104%;
+  left: -2%;
+  bottom: -30%;
+  height: 2px;
+  position: absolute;
+  background-color: #004d3e;
 }
 
 footer .-personal a:hover {
   color: #6da06f;
+}
+
+footer .-personal a:hover::after {
+  background-color: #6da06f;
 }
 
 @use 'base';
@@ -627,7 +680,7 @@ nav .-div-nav.-active {
   top: 0;
   left: 0;
   background-color: #6da06f;
-  width: 80%;
+  width: 70%;
   height: 100%;
   z-index: 100;
   -webkit-transform: translateX(-100%);
@@ -672,7 +725,7 @@ nav .-menu {
   font-size: 2rem;
   cursor: pointer;
   float: right;
-  z-index: 200;
+  z-index: 500;
   color: #e6efed;
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

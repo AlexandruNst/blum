@@ -19,7 +19,7 @@ nav {
       top: 0;
       left: 0;
       background-color: $color-main;
-      width: 80%;
+      width: 70%;
       height: 100%;
       z-index: 100;
       transform: translateX(-100%);
@@ -59,7 +59,7 @@ nav {
     font-size: 2rem;
     cursor: pointer;
     float: right;
-    z-index: 200;
+    z-index: 500;
     color: $off-white;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 

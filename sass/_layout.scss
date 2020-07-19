@@ -37,7 +37,10 @@
         color: $color-highlight;
       }
       h1 {
-        font-size: 11vw;
+        font-size: 14vw;
+        @media (min-width: 768px) {
+          font-size: 11vw;
+        }
         color: $off-white;
       }
       div {
@@ -197,9 +200,17 @@
 
     .-about-buttons {
       width: 80%;
-      @media (min-width: 992px) {
-        width: 40%;
+      @media (min-width: 768px) {
+        height: 50%;
+        // width: 60%;
       }
+      @media (min-width: 992px) {
+        width: 35%;
+      }
+      @media (min-width: 1400px) {
+        width: 25%;
+      }
+
       margin: 0 auto;
       display: flex;
       justify-content: space-around;
@@ -373,11 +384,12 @@
   position: relative;
   .col-12 {
     margin-bottom: 5rem;
+    padding: 2rem;
   }
   .-div-contact {
     padding-top: 6rem;
     @media (min-width: 992px) {
-      padding-top: 16rem;
+      padding-top: 14rem;
     }
     p {
       @extend %normal-text;
@@ -411,6 +423,14 @@
       input {
         height: 3rem;
       }
+      button {
+        margin: 2rem auto;
+        display: block;
+      }
+    }
+
+    .-div-info {
+      margin-top: 3rem;
     }
   }
 }
@@ -483,10 +503,28 @@ footer {
     @media (min-width: 992px) {
       margin-top: 5rem;
     }
+    color: $off-black;
+
     a {
       color: $off-black;
+      position: relative;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: "";
+        transition: all 0.3s ease;
+        width: 104%;
+        left: -2%;
+        bottom: -30%;
+        height: 2px;
+        position: absolute;
+        background-color: $off-black;
+      }
       &:hover {
         color: $color-main;
+        &::after {
+          background-color: $color-main;
+        }
       }
     }
   }

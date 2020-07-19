@@ -35,3 +35,7 @@ a {
 .-font-display {
   @extend %font-family-display;
 }
+
+.-dim {
+  filter: brightness(0.5);
+}
