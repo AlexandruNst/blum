@@ -432,7 +432,7 @@ a:hover {
   margin: 0;
 }
 
-#showcase .-div-showcase .row {
+#showcase .-div-showcase .-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +441,7 @@ a:hover {
   width: 100%;
 }
 
-#showcase .-div-showcase .row .col {
+#showcase .-div-showcase .-row .-col {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
@@ -450,7 +450,7 @@ a:hover {
 }
 
 @media (min-width: 992px) {
-  #showcase .-div-showcase .row .col {
+  #showcase .-div-showcase .-row .-col {
     -webkit-box-flex: 25%;
         -ms-flex: 25%;
             flex: 25%;
@@ -458,7 +458,10 @@ a:hover {
   }
 }
 
-#showcase .-div-showcase .row .col img {
+#showcase .-div-showcase .-row .-col img {
+  -webkit-transform: scale(0.9) translateY(20px);
+          transform: scale(0.9) translateY(20px);
+  opacity: 0;
   vertical-align: middle;
   width: 100%;
   margin: 1rem;
@@ -466,9 +469,11 @@ a:hover {
           box-shadow: 0 10px 20px rgba(5, 39, 22, 0.19), 0 6px 6px rgba(5, 39, 22, 0.23);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-animation: filter-photo 0.3s ease forwards;
+          animation: filter-photo 0.3s ease forwards;
 }
 
-#showcase .-div-showcase .row .col img:hover {
+#showcase .-div-showcase .-row .-col img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -648,6 +653,22 @@ footer .-personal a:hover {
 
 footer .-personal a:hover::after {
   background-color: #6da06f;
+}
+
+@-webkit-keyframes filter-photo {
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes filter-photo {
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 @use 'base';

@@ -352,11 +352,11 @@
         margin: 0;
       }
     }
-    .row {
+    .-row {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      .col {
+      .-col {
         flex: 50%;
         max-width: 50%;
         @media (min-width: 992px) {
@@ -365,12 +365,15 @@
         }
         padding: 0 1rem;
         img {
+          transform: scale(0.9) translateY(20px);
+          opacity: 0;
           vertical-align: middle;
           width: 100%;
           margin: 1rem;
           box-shadow: 0 10px 20px rgba(5, 39, 22, 0.19),
             0 6px 6px rgba(5, 39, 22, 0.23);
           transition: all 0.3s ease;
+          animation: filter-photo 0.3s ease forwards;
           &:hover {
             transform: scale(1.05);
           }
@@ -527,5 +530,12 @@ footer {
         }
       }
     }
+  }
+}
+
+@keyframes filter-photo {
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
 }
