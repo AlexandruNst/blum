@@ -83,6 +83,36 @@
         color: $off-white;
       }
     }
+    .-div-carousel-number {
+      position: absolute;
+      bottom: 2%;
+      .-line {
+        width: 15vw;
+        height: 1.5rem;
+        @media (min-width: 992px) {
+          height: 3rem;
+          width: 25vw;
+        }
+        display: inline-block;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          top: 50%;
+          background-color: $off-white;
+        }
+      }
+      .-carousel-number {
+        font-size: 2rem;
+        @media (min-width: 992px) {
+          font-size: 4rem;
+        }
+        color: $off-white;
+        margin-left: 1rem;
+      }
+    }
   }
 }
 

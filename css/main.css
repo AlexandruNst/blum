@@ -127,6 +127,46 @@ a:hover {
   color: #e6efed;
 }
 
+#landing .-div-landing .-div-carousel-number {
+  position: absolute;
+  bottom: 2%;
+}
+
+#landing .-div-landing .-div-carousel-number .-line {
+  width: 15vw;
+  height: 1.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  #landing .-div-landing .-div-carousel-number .-line {
+    height: 3rem;
+    width: 25vw;
+  }
+}
+
+#landing .-div-landing .-div-carousel-number .-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 50%;
+  background-color: #e6efed;
+}
+
+#landing .-div-landing .-div-carousel-number .-carousel-number {
+  font-size: 2rem;
+  color: #e6efed;
+  margin-left: 1rem;
+}
+
+@media (min-width: 992px) {
+  #landing .-div-landing .-div-carousel-number .-carousel-number {
+    font-size: 4rem;
+  }
+}
+
 #about {
   position: relative;
 }
