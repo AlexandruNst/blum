@@ -84,11 +84,34 @@ a:hover {
 #landing .-div-landing .-div-central h1 {
   font-size: 14vw;
   color: #e6efed;
+  position: relative;
 }
 
 @media (min-width: 768px) {
   #landing .-div-landing .-div-central h1 {
     font-size: 11vw;
+  }
+}
+
+#landing .-div-landing .-div-central h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 70vw;
+  width: 70vw;
+  border: 5px solid #e6efed;
+  z-index: -1;
+  opacity: 0.2;
+  -webkit-transform: translateX(-50%) translateY(-30%);
+          transform: translateX(-50%) translateY(-30%);
+  border-radius: 100%;
+}
+
+@media (min-width: 768px) {
+  #landing .-div-landing .-div-central h1::after {
+    height: 40vw;
+    width: 40vw;
   }
 }
 
