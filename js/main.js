@@ -117,3 +117,47 @@ function showLargePlants() {
     largePlants[i].style.display = "block";
   }
 }
+
+// Landing
+
+carouselNumber = document.getElementsByClassName("-carousel-number")[0];
+largeNumber = document.getElementsByClassName("-large-number")[0];
+leftArrow = document.getElementsByClassName("fa-chevron-left")[0];
+rightArrow = document.getElementsByClassName("fa-chevron-right")[0];
+bg = document.getElementsByClassName("-bg")[0];
+totalImages = 4;
+imageCounter = 0;
+setUp();
+
+leftArrow.onclick = () => {
+  imageCounter = (imageCounter + totalImages - 1) % totalImages;
+  setUp();
+};
+
+rightArrow.onclick = () => {
+  imageCounter = (imageCounter + 1) % totalImages;
+  setUp();
+};
+
+function setNumbers() {
+  largeNumber.innerHTML = imageCounter + 1;
+  carouselNumber.innerHTML = "00" + (imageCounter + 1);
+}
+
+function setBg(n) {
+  bg.style.display = "none";
+
+  setTimeout(function () {
+    bg.style.backgroundImage = "url('../res/img/bg" + n + ".jpg')";
+    bg.style.animation = "bg-animation 0.5s ease forwards";
+    bg.style.display = "block";
+  }, 1);
+}
+
+function setUp() {
+  setNumbers();
+  setBg(imageCounter + 1);
+  // setTimeout(function () {
+  //   bg.style.animation = "none";
+  // }, 1000);
+}
