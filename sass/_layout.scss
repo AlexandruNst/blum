@@ -87,7 +87,7 @@
     }
     .-div-carousel-number {
       position: absolute;
-      bottom: 2%;
+      bottom: 8%;
       .-line {
         width: 15vw;
         height: 1.5rem;
@@ -117,7 +117,7 @@
     }
     .-div-arrows {
       position: absolute;
-      bottom: 2%;
+      bottom: 8%;
       left: 50%;
       color: $off-white;
       font-size: 2rem;
@@ -137,7 +137,7 @@
     }
     .-div-large-number {
       position: absolute;
-      bottom: 0%;
+      bottom: 10%;
       right: -5%;
       font-size: 45vw;
       @media (min-width: 992px) {

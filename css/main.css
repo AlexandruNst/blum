@@ -129,7 +129,7 @@ a:hover {
 
 #landing .-div-landing .-div-carousel-number {
   position: absolute;
-  bottom: 2%;
+  bottom: 8%;
 }
 
 #landing .-div-landing .-div-carousel-number .-line {
@@ -169,7 +169,7 @@ a:hover {
 
 #landing .-div-landing .-div-arrows {
   position: absolute;
-  bottom: 2%;
+  bottom: 8%;
   left: 50%;
   color: #e6efed;
   font-size: 2rem;
@@ -197,7 +197,7 @@ a:hover {
 
 #landing .-div-landing .-div-large-number {
   position: absolute;
-  bottom: 0%;
+  bottom: 10%;
   right: -5%;
   font-size: 45vw;
   font-weight: bold;
