@@ -113,6 +113,26 @@
         margin-left: 1rem;
       }
     }
+    .-div-arrows {
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      color: $off-white;
+      font-size: 2rem;
+      @media (min-width: 992px) {
+        font-size: 3rem;
+      }
+      transform: translateX(-50%);
+      i {
+        cursor: pointer;
+      }
+      i:first-child {
+        margin-right: 1rem;
+      }
+      i:last-child {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 

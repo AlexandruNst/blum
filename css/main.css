@@ -167,6 +167,34 @@ a:hover {
   }
 }
 
+#landing .-div-landing .-div-arrows {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  color: #e6efed;
+  font-size: 2rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  #landing .-div-landing .-div-arrows {
+    font-size: 3rem;
+  }
+}
+
+#landing .-div-landing .-div-arrows i {
+  cursor: pointer;
+}
+
+#landing .-div-landing .-div-arrows i:first-child {
+  margin-right: 1rem;
+}
+
+#landing .-div-landing .-div-arrows i:last-child {
+  margin-left: 1rem;
+}
+
 #about {
   position: relative;
 }
