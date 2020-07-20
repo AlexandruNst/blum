@@ -148,10 +148,10 @@ function setBg(n) {
   bg.style.display = "none";
 
   setTimeout(function () {
-    bg.style.backgroundImage = "url('../res/img/bg" + n + ".jpg')";
+    bg.style.backgroundImage = "url('res/img/bg" + n + ".jpg')";
     bg.style.animation = "bg-animation 0.5s ease forwards";
     bg.style.display = "block";
-  }, 1);
+  }, 0);
 }
 
 function setUp() {

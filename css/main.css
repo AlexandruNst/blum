@@ -781,7 +781,7 @@ footer .-personal a:hover::after {
 
 @-webkit-keyframes bg-animation {
   0% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
@@ -790,7 +790,7 @@ footer .-personal a:hover::after {
 
 @keyframes bg-animation {
   0% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
     opacity: 1;
