@@ -5,6 +5,7 @@
   height: 100vh;
   min-height: 600px;
   position: relative;
+  overflow: hidden;
 
   .-div-landing {
     .-bg {
@@ -132,6 +133,19 @@
       i:last-child {
         margin-left: 1rem;
       }
+    }
+    .-div-large-number {
+      position: absolute;
+      bottom: 0%;
+      right: -5%;
+      font-size: 45vw;
+      @media (min-width: 992px) {
+        bottom: -12%;
+        font-size: 40vw;
+      }
+      font-weight: bold;
+      color: $off-white;
+      opacity: 0.2;
     }
   }
 }

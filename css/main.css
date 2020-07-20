@@ -37,6 +37,7 @@ a:hover {
   height: 100vh;
   min-height: 600px;
   position: relative;
+  overflow: hidden;
 }
 
 #landing .-div-landing {
@@ -193,6 +194,23 @@ a:hover {
 
 #landing .-div-landing .-div-arrows i:last-child {
   margin-left: 1rem;
+}
+
+#landing .-div-landing .-div-large-number {
+  position: absolute;
+  bottom: 0%;
+  right: -5%;
+  font-size: 45vw;
+  font-weight: bold;
+  color: #e6efed;
+  opacity: 0.2;
+}
+
+@media (min-width: 992px) {
+  #landing .-div-landing .-div-large-number {
+    bottom: -12%;
+    font-size: 40vw;
+  }
 }
 
 #about {
