@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>blum | Home</title>
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -81,6 +84,9 @@
         <div class="row">
           <div
             class="col-12 col-lg-6 order-2 order-lg-1 d-flex align-items-center"
+            data-aos="fade-right"
+            data-aos-once="true"
+            data-aos-duration="500"
           >
             <div class="-div-side -left">
               <div class="-img-container -right">
@@ -89,7 +95,12 @@
               </div>
             </div>
           </div>
-          <div class="col order-1 order-lg-2">
+          <div
+            class="col order-1 order-lg-2"
+            data-aos="fade-in"
+            data-aos-once="true"
+            data-aos-duration="500"
+          >
             <h1><span>Dedicated to Growth</span></h1>
             <p>
               We guarantee our plants will thrive in your space, all year round.
@@ -99,7 +110,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="fade-in"
+            data-aos-once="true"
+            data-aos-duration="500"
+          >
             <h1><span>Committed to Sustainabiliy</span></h1>
             <p>
               Our plants are grown with care, in a sustainable and
@@ -107,7 +123,12 @@
               contain a certificate attesting the sourcing of the product.
             </p>
           </div>
-          <div class="col-12 col-lg-6 d-flex align-items-center">
+          <div
+            class="col-12 col-lg-6 d-flex align-items-center"
+            data-aos="fade-left"
+            data-aos-once="true"
+            data-aos-duration="500"
+          >
             <div class="-div-side -right">
               <div class="-img-container -left">
                 <img src="res/img/showcase32.jpg" alt="img" />
@@ -117,7 +138,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="500"
+          >
             <p>...and most importantly</p>
             <h1><span>Plants, Your Way</span></h1>
             <p>
@@ -147,7 +173,12 @@
     </section>
     <section id="stats">
       <div class="-div-stats">
-        <div class="container">
+        <div
+          class="container"
+          data-aos="flip-down"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        >
           <div class="row">
             <div class="col-6 col-lg-3">
               <i class="fas fa-seedling"></i>
@@ -176,7 +207,12 @@
     <section id="showcase">
       <span class="-watermark">showcase</span>
       <div class="-div-showcase">
-        <div class="container">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="500"
+        >
           <h1><span>We Value Variety</span></h1>
           <p>
             We strongly believe in your power of self-expression and in our
@@ -254,7 +290,12 @@
     <section id="contact">
       <span class="-watermark">contact</span>
       <div class="-div-contact">
-        <div class="container">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="500"
+        >
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="-div-form">
@@ -341,5 +382,10 @@
     ></script>
     <!-- JS -->
     <script src="js/main.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

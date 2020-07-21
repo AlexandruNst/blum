@@ -87,7 +87,7 @@
     }
     .-div-carousel-number {
       position: absolute;
-      bottom: 10%;
+      bottom: 15%;
 
       @media (min-width: 992px) {
         bottom: 3%;
@@ -121,7 +121,7 @@
     }
     .-div-arrows {
       position: absolute;
-      bottom: 10%;
+      bottom: 15%;
       left: 50%;
       color: $off-white;
       font-size: 2rem;
@@ -143,9 +143,9 @@
     .-div-large-number {
       position: absolute;
       z-index: -1;
-      bottom: -10%;
-      right: -20%;
-      font-size: 80vw;
+      bottom: -5%;
+      right: -15%;
+      font-size: 85vw;
       @media (min-width: 992px) {
         font-size: 40vw;
         bottom: -20%;
