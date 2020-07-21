@@ -1,10 +1,17 @@
 // Hamburger menu
 menu = document.getElementsByClassName("-menu")[0];
 hamburger = menu.getElementsByTagName("i")[0];
+navLinks = document.getElementsByClassName("-nav-link");
 menu.onclick = () => {
   document.getElementsByClassName("-div-nav")[0].classList.toggle("-active");
   hamburger.classList.toggle("fa-times");
 };
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].onclick = () => {
+    document.getElementsByClassName("-div-nav")[0].classList.remove("-active");
+    hamburger.classList.toggle("fa-times");
+  };
+}
 
 // Plant filter
 smallPlants = document.getElementsByClassName("-filter-1");
@@ -90,7 +97,7 @@ function hideMediumPlants() {
 
 function showMediumPlants() {
   for (let i = 0; i < mediumPlants.length; i++) {
-    mediumPlants[i].style.display = "block";
+    mediumPlants[i].style.display = "inline-block";
   }
 }
 
@@ -102,7 +109,7 @@ function hideSmallPlants() {
 
 function showSmallPlants() {
   for (let i = 0; i < smallPlants.length; i++) {
-    smallPlants[i].style.display = "block";
+    smallPlants[i].style.display = "inline-block";
   }
 }
 
@@ -114,7 +121,7 @@ function hideLargePlants() {
 
 function showLargePlants() {
   for (let i = 0; i < largePlants.length; i++) {
-    largePlants[i].style.display = "block";
+    largePlants[i].style.display = "inline-block";
   }
 }
 
@@ -145,13 +152,15 @@ function setNumbers() {
 }
 
 function setBg(n) {
-  bg.style.display = "none";
+  // bg.style.display = "none";
+  bg.style.backgroundImage = "url('res/img/bg" + n + ".jpg')";
+
+  bg.style.animation = "bg-animation 0.5s ease-out forwards";
 
   setTimeout(function () {
-    bg.style.backgroundImage = "url('res/img/bg" + n + ".jpg')";
-    bg.style.animation = "bg-animation 0.5s ease forwards";
-    bg.style.display = "block";
-  }, 0);
+    bg.style.animation = "none";
+    // bg.style.display = "block";
+  }, 600);
 }
 
 function setUp() {
