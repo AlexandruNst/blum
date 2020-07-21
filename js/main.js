@@ -9,7 +9,7 @@ menu.onclick = () => {
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].onclick = () => {
     document.getElementsByClassName("-div-nav")[0].classList.remove("-active");
-    hamburger.classList.toggle("fa-times");
+    hamburger.classList.remove("fa-times");
   };
 }
 

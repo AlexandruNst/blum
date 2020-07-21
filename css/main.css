@@ -73,8 +73,15 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 5rem;
   margin: auto;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  #landing .-div-landing .-div-central {
+    padding-bottom: 0rem;
+  }
 }
 
 #landing .-div-landing .-div-central p {
@@ -98,9 +105,9 @@ a:hover {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0;
-  height: 70vw;
-  width: 70vw;
+  top: -40%;
+  height: 75vw;
+  width: 75vw;
   border: 5px solid #e6efed;
   z-index: -1;
   opacity: 0.2;
@@ -111,6 +118,7 @@ a:hover {
 
 @media (min-width: 768px) {
   #landing .-div-landing .-div-central h1::after {
+    top: 0;
     height: 40vw;
     width: 40vw;
   }
@@ -223,6 +231,7 @@ a:hover {
 }
 
 #about {
+  overflow: hidden;
   position: relative;
 }
 
